@@ -210,3 +210,44 @@ i = 4 j = 3 arr[i] = 5 arr[j] = 5
 
 ### Сортировка выбором
 
+Алгоритм O(n²)
+
+Сортирует элементы в диапазоне [k; n-1]
+
+```C++
+void selectionSort(int *arr, int len) {
+    int temp;
+    for (int i = 0; i < len-1; i++) {
+        for (int j = i+1; j < len; j++) {
+            std::cout << "i = " << i << " j = " << j << " arr[i] = " << arr[i] << " arr[j] = " << arr[j] << std::endl;
+            if (arr[i] > arr[j]) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                std::cout << "Change: i = " << i << " j = " << j << " arr[i] = " << arr[i] << " arr[j] = " << arr[j] << std::endl;
+            }
+        }
+    }
+}
+```
+
+Логи:
+
+```C++
+i = 0 j = 1 arr[i] = 5 arr[j] = 5
+i = 0 j = 2 arr[i] = 5 arr[j] = 3
+Change: i = 0 j = 2 arr[i] = 3 arr[j] = 5
+i = 0 j = 3 arr[i] = 3 arr[j] = 4
+i = 0 j = 4 arr[i] = 3 arr[j] = 2
+Change: i = 0 j = 4 arr[i] = 2 arr[j] = 3
+i = 1 j = 2 arr[i] = 5 arr[j] = 5
+i = 1 j = 3 arr[i] = 5 arr[j] = 4
+Change: i = 1 j = 3 arr[i] = 4 arr[j] = 5
+i = 1 j = 4 arr[i] = 4 arr[j] = 3
+Change: i = 1 j = 4 arr[i] = 3 arr[j] = 4
+i = 2 j = 3 arr[i] = 5 arr[j] = 5
+i = 2 j = 4 arr[i] = 5 arr[j] = 4
+Change: i = 2 j = 4 arr[i] = 4 arr[j] = 5
+i = 3 j = 4 arr[i] = 5 arr[j] = 5
+2 3 4 5 5
+```

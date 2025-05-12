@@ -68,8 +68,10 @@ int main() {
 //    std::cout << std::endl;
 
 // 2 Lesson: Selection Sort
-    const int LENGTH = 10;
-    int arr[LENGTH] = {1, 7, 10, 3, 4, -5, 12, 89, 90, 2};
+//    const int LENGTH = 10;
+//    int arr[LENGTH] = {1, 7, 10, 3, 4, -5, 12, 89, 90, 2};
+    const int LENGTH = 5;
+    int arr[LENGTH] = {5, 5, 3, 4, 2};
     selectionSort(arr, LENGTH);
     for (int i = 0; i < LENGTH; i++) {
         std::cout << arr[i] << " ";
