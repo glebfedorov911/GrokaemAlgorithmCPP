@@ -14,7 +14,7 @@
 //    cin.tie(nullptr) — отвязывает cin от cout, чтобы cin не ждал cout → ещё быстрее.
 //    !!!! После этих настроек не смешивай scanf/printf с cin/cout — могут быть баги. !!!!
 
-void input() {
+void inputOutput() {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(0);
 

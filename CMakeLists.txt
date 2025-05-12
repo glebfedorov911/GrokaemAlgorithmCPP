@@ -5,4 +5,9 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(GrokaemAlgorithmCPP main.cpp
         fastInputOutput.cpp
-        fastInputOutput.h)
+        fastInputOutput.h
+        binarySearch.cpp
+        binarySearch.h
+        Sorts.cpp
+        Sorts.h
+)
