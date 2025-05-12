@@ -216,6 +216,10 @@ i = 4 j = 3 arr[i] = 5 arr[j] = 5
 
 Сортирует элементы в диапазоне [k; n-1]
 
+Описание с картинкой
+![Cортировка выбором](imagesWithDescription/selectionSort.jpg)
+
+
 ```C++
 void selectionSort(int *arr, int len) {
     int temp;
