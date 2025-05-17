@@ -31,3 +31,23 @@ void selectionSort(int *arr, int len) {
         }
     }
 }
+
+void insertionSort(int* arr, int len) {
+    int temp;
+    for (int k = 1; k < len; k++) {
+        std::cout << "k = " << k << " arr[k] = " << arr[k] << std::endl;
+        for (int i = k; i > 0 && arr[i-1] > arr[i]; i--) {
+            std::cout << "k = " << k << " arr[k] = " << arr[k] << " i = " << i << " i-1 = " << i-1 << " " <<
+            " arr[i] = " << arr[i] << "  arr[i-1] = " << arr[i-1] << std::endl;
+            temp = arr[i-1];
+            arr[i-1] = arr[i];
+            arr[i] = temp;
+            std::cout << "k = " << k << " arr[k] = " << arr[k] << " i = " << i << " i-1 = " << i-1 << " " <<
+            " arr[i] = " << arr[i] << "  arr[i-1] = " << arr[i-1] << " SWAP!!!" << std::endl;
+            for (int j = 0; j < len; j++) {
+                std::cout << arr[j] << " ";
+            }
+            std::cout << std::endl;
+        }
+    }
+}
